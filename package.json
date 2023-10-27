@@ -8,7 +8,6 @@
     "email": "bhatearnav@gmail.com"
   },
   "dependencies": {
-    "@fluentui/react-components": "latest",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",

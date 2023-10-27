@@ -1,4 +1,5 @@
 import './App.css';
+import NewItemForm from './components/NewItemForm.js';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <div className="header">
         <span className="header-item">To Do list</span>
       </div>
+      <NewItemForm />
     </div>
   );
 }
