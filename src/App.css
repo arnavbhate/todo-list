@@ -54,7 +54,7 @@ body {
 .new-item-input {
     width: 440px;
     border-radius: 2px;
-    border: 0.8px solid #757575;
+    border: 1px solid #757575;
     min-height: 31.5px;
     font-size: 14px;
     line-height: 1.5;
@@ -85,7 +85,7 @@ select {
     box-shadow: none;
     height: 34px;
     background-color: #FFFFFF;
-    border: 0.8px solid #757575;
+    border: 1px solid #757575;
     border-radius: 2px;
     position: absolute;
     left: 472px;
@@ -95,7 +95,7 @@ select {
 .list-item {
     width: 473.5px;
     border-radius: 2px;
-    border: 0.8px solid #757575;
+    border: 1px solid #757575;
     min-height: 31.5px;
     font-size: 14px;
     line-height: 1.5;

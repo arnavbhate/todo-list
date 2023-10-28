@@ -1,6 +1,7 @@
 import React from "react";
 
 function NewItemForm({ inputText, setInputText, todoItems, setTodoItems }) {
+    // Handlers
     function inputTextHandler(e) {
         setInputText(e.target.value);
     }
@@ -11,6 +12,7 @@ function NewItemForm({ inputText, setInputText, todoItems, setTodoItems }) {
             setInputText('');
         }
     }
+
     return (
         <form className="new-item-input">
             <input type="text" placeholder="Add new item" onChange={inputTextHandler} value={inputText} />

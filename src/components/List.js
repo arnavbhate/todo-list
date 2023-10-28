@@ -9,7 +9,11 @@ function List({ todoItems, setTodoItems }) {
                 <option value="incomplete">Incomplete</option>
                 <option value="completed">Completed</option>
             </select>
-            <div className="list" />
+            <div className="list">
+                {todoItems.map(item => (
+                    <TodoItem key={item.id} todoItem={item} todoItems={todoItems} setTodoItems={setTodoItems} />
+                ))}
+            </div>
         </div>
     );
 }
