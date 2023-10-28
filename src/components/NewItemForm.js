@@ -1,10 +1,20 @@
 import React from "react";
 
-function NewItemForm() {
+function NewItemForm({ inputText, setInputText, todoItems, setTodoItems }) {
+    function inputTextHandler(e) {
+        setInputText(e.target.value);
+    }
+    function submitItemHandler(e) {
+        e.preventDefault();
+        if (inputText !== '') {
+            setTodoItems([...todoItems, { id: Date.now(), text: inputText, completed: false }]);
+            setInputText('');
+        }
+    }
     return (
         <form className="new-item-input">
-            <input type="text" className="" placeholder="Add new item" />
-            <button type="submit" className="new-item-button icon-button">&#xe710;</button>
+            <input type="text" placeholder="Add new item" onChange={inputTextHandler} value={inputText} />
+            <button type="submit" className="new-item-button icon-button" onClick={submitItemHandler}>&#xe710;</button>
         </form>
     );
 }
