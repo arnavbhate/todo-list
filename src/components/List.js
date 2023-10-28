@@ -1,20 +1,25 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-function List({ todoItems, setTodoItems }) {
+function List({ todoItems, setTodoItems, filteredItems, setFilter }) {
+    // Handlers
+    function filterHandler(e) {
+        setFilter(e.target.value);
+    }
+
     return (
         <div className="list-wrapper">
-            <select className="list-select">
+            <select onChange={filterHandler}>
                 <option value="all">All</option>
                 <option value="incomplete">Incomplete</option>
                 <option value="completed">Completed</option>
             </select>
-            <div className="list">
-                {todoItems.map(item => (
+            <div>
+                {filteredItems.map(item => (
                     <TodoItem key={item.id} todoItem={item} todoItems={todoItems} setTodoItems={setTodoItems} />
                 ))}
             </div>
-        </div>
+        </div >
     );
 }
 
